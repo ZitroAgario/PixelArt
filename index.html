@@ -31,7 +31,7 @@ for(var j=0;j<pixels;j++){
   }
 		fixDeadROWS()	
 };
-	buildPX(px){
+	function buildPX(px){
 	var row=document.getElementsByClassName('row');
 		for(var s=0;s<px;s++){
 		row[s].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
