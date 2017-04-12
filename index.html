@@ -26,11 +26,17 @@ var row=document.getElementsByClassName('row');
 for(var j=0;j<pixels;j++){
   row[j].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
 	for(var t=0;t<pixels-1;t++){
-	buildTable(0,10);
+	buildPX(10);
 	}
   }
 		fixDeadROWS()	
 };
+	buildPX(px){
+	var row=document.getElementsByClassName('row');
+		for(var s=0;s<px;s++){
+		row[s].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
+		}
+	}
 function fixDeadROWS(){
 	var rows = document.getElementsByClassName('row');
 for (var i=rows.length-1; i>=0; i--) {
