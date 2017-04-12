@@ -2,8 +2,32 @@
 <head>
 	<title>Pixel Art</title>
 	<link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="builder.js"></script>
+    <script>
+	  var penColour = 'white';
+    
+  function setPenColour(pen)
+  {
+    penColour = pen;
+  }
+
+  function setPixelColour(pixel)
+  {
+    pixel.style.backgroundColor = penColour;
+  }
+var KEY = "";
+	</script>
+    <script>
+	function buildTable(rows, pixels){
+var art=document.getElementById('art');
+for(var i=0;i<rows;i++){
+  art.innerHTML+='<div class="row"></div>';
+  }
+var row=document.getElementsByClassName('row');
+for(var j=0;j<pixels;j++){
+  row[j].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
+  }
+};
+	</script>
 </head>
 <body>
 	
