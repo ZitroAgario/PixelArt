@@ -9,3 +9,4 @@
   {
     pixel.style.backgroundColor = penColour;
   }
+var KEY = "";
