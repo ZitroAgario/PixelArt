@@ -24,18 +24,18 @@ for(var i=0;i<rows;i++){
   }
 var row=document.getElementsByClassName('row');
 for(var j=0;j<pixels;j++){
-  row[j].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
+for(var s=0;s<px-1;s++){
 	
 	buildPX(pixels);
-	
+	}
   }
 		fixDeadROWS()	
 };
 	function buildPX(px){
-	var row=document.getElementsByClassName('row');
-		for(var s=0;s<px-1;s++){
+
+		
 		row[s].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
-		}
+		
 	}
 function fixDeadROWS(){
 	var rows = document.getElementsByClassName('row');
