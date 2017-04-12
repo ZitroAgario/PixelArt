@@ -9,7 +9,6 @@
   {
     penColour = pen;
   }
-
   function setPixelColour(pixel)
   {
     pixel.style.backgroundColor = penColour;
@@ -24,14 +23,18 @@ for(var i=0;i<rows;i++){
   }
 var row=document.getElementsByClassName('row');
 for(var j=0;j<pixels;j++){
- 	for(var t=0;t<pixels-1;t++){
+  row[j].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
+	
 	buildPX(pixels);
-  	}
+	
   }
 		fixDeadROWS()	
 };
-	function buildPX(px){	
-		row[t].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
+	function buildPX(px){
+	var row=document.getElementsByClassName('row');
+		for(var s=0;s<px-1;s++){
+		row[s].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
+		}
 	}
 function fixDeadROWS(){
 	var rows = document.getElementsByClassName('row');
@@ -58,6 +61,3 @@ for (var i=rows.length-1; i>=0; i--) {
   </div>
 </body>
 </html>
-
-
-
