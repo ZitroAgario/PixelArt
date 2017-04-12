@@ -27,6 +27,14 @@ for(var j=0;j<pixels;j++){
   row[j].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
   }
 };
+function fixDeadROWS(){
+	var rows = document.$$('div.row');
+for (var i=rows.length-1; i>=0; i--) {
+  if (rows[i].innerHTML.search('$$("div.pixel")') == -1)
+    rows[i].parentNode.removeChild(rows[i]);
+}
+
+	}
 	</script>
 </head>
 <body>
