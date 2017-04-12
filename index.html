@@ -24,18 +24,14 @@ for(var i=0;i<rows;i++){
   }
 var row=document.getElementsByClassName('row');
 for(var j=0;j<pixels;j++){
-for(var s=0;s<px-1;s++){
-	
+ 	for(var t=0;t<pixels-1;t++){
 	buildPX(pixels);
-	}
+  	}
   }
 		fixDeadROWS()	
 };
-	function buildPX(px){
-
-		
+	function buildPX(px){	
 		row[s].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
-		
 	}
 function fixDeadROWS(){
 	var rows = document.getElementsByClassName('row');
@@ -43,7 +39,6 @@ for (var i=rows.length-1; i>=0; i--) {
   if (rows[i].innerHTML.search(document.getElementsByClassName("pixel")[0]) == -1)
     rows[i].parentNode.removeChild(rows[i]);
 }
-
 	}
 	</script>
 </head>
