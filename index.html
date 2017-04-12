@@ -9,6 +9,7 @@
   {
     penColour = pen;
   }
+
   function setPixelColour(pixel)
   {
     pixel.style.backgroundColor = penColour;
@@ -32,7 +33,7 @@ for(var j=0;j<pixels;j++){
 };
 	function buildPX(px){
 	var row=document.getElementsByClassName('row');
-		for(var s=0;s<px-1;s++){
+		for(var s=0;s<px;s++){
 		row[s].innerHTML+='<div class="pixel" onclick="setPixelColour(this)"></div>';
 		}
 	}
@@ -42,6 +43,7 @@ for (var i=rows.length-1; i>=0; i--) {
   if (rows[i].innerHTML.search(document.getElementsByClassName("pixel")[0]) == -1)
     rows[i].parentNode.removeChild(rows[i]);
 }
+
 	}
 	</script>
 </head>
@@ -61,3 +63,5 @@ for (var i=rows.length-1; i>=0; i--) {
   </div>
 </body>
 </html>
+
+
